@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: game-2048-qa
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: git@github.com:valerig-yaar/ArgoCD-apps.git
+    targetRevision: HEAD
+    path: charts/game-2048
+    helm:
+      valueFiles:
+        - ../../argo-apps/game-2048-qa/values.yaml
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: qa
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true

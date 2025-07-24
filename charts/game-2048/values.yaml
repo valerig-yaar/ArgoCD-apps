@@ -1,0 +1,31 @@
+env: dev
+namespace: game-2048-dev
+
+replicaCount: 2
+
+image:
+  repository: public.ecr.aws/l6m2t8p7/docker-2048
+  tag: latest
+  pullPolicy: Always
+
+resources:
+  limits:
+    cpu: 500m
+    memory: 256Mi
+  requests:
+    cpu: 100m
+    memory: 128Mi
+
+service:
+  type: NodePort
+  port: 80
+
+ingress:
+  enabled: true
+  annotations:
+    alb.ingress.kubernetes.io/scheme: internet-facing
+    alb.ingress.kubernetes.io/target-type: ip
+    alb.ingress.kubernetes.io/inbound-cidrs: "147.235.197.252/32,147.235.203.169/32"
+  className: alb
+  path: /dev
+  pathType: Prefix

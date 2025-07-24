@@ -1,0 +1,4 @@
+env: prod
+namespace: prod
+ingress:
+  path: /prod
