@@ -1,4 +1,4 @@
 env: dev
 namespace: dev
 ingress:
-  path: /
+  path: /dev
