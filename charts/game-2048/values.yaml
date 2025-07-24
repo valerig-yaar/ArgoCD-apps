@@ -26,6 +26,7 @@ ingress:
     alb.ingress.kubernetes.io/scheme: internet-facing
     alb.ingress.kubernetes.io/target-type: ip
     alb.ingress.kubernetes.io/inbound-cidrs: "147.235.197.252/32,147.235.203.169/32"
+    alb.ingress.kubernetes.io/group.name: shared-2048-lb
   className: alb
   path: /dev
   pathType: Prefix
