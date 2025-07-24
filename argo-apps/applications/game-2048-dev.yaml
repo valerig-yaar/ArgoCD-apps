@@ -11,7 +11,7 @@ spec:
     path: charts/game-2048
     helm:
       valueFiles:
-        - ../../argo-apps/game-2048-dev/values.yaml
+        - ../game-2048-dev/values.yaml
   destination:
     server: https://kubernetes.default.svc
     namespace: dev
