@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: game-2048-qa
+  name: game-2048-staging
   namespace: argocd
 spec:
   project: default
@@ -14,7 +14,7 @@ spec:
         - ../../argo-apps/game-2048-qa/values.yaml
   destination:
     server: https://kubernetes.default.svc
-    namespace: qa
+    namespace: staging
   syncPolicy:
     automated:
       prune: true

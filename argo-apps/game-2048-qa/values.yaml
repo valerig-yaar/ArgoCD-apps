@@ -1,4 +1,0 @@
-env: qa
-namespace: qa
-ingress:
-  path: /

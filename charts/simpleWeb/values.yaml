@@ -1,0 +1,24 @@
+env: dev
+
+image:
+  repository: ghcr.io/valerig-yaar/hello-world-web
+  tag: 1.0.5
+  pullPolicy: Always
+
+replicaCount: 2
+
+ingress:
+  enabled: true
+  className: alb
+  path: /
+  pathType: Prefix
+  allowedCIDRs: "147.235.197.252/32,147.235.203.169/32"
+  groupName: simple-web-group
+
+resources:
+  limits:
+    cpu: 250m
+    memory: 128Mi
+  requests:
+    cpu: 100m
+    memory: 64Mi

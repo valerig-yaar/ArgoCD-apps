@@ -1,0 +1,4 @@
+env: staging
+namespace: staging
+ingress:
+  path: /staging
