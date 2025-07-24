@@ -11,7 +11,7 @@ spec:
     path: charts/simpleWeb
     helm:
       valueFiles:
-        - ../simpleWeb-prod/values.yaml
+        - ../../argo-apps/simpleWeb-prod/values.yaml
   destination:
     server: https://kubernetes.default.svc
     namespace: prod
