@@ -19,6 +19,8 @@ spec:
           env:
             - name: ENV
               value: "{{ .Values.env }}"
+            - name: APP_VERSION
+              value: "{{ .Values.image.tag }}"
             - name: POD_IP
               valueFrom:
                 fieldRef:

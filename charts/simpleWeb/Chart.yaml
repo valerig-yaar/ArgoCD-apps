@@ -2,5 +2,5 @@ apiVersion: v2
 name: simple-website
 description: Basic web app with env and IP restrictions
 type: application
-version: 0.1.0
+version: 0.1.1
 appVersion: "1.0"

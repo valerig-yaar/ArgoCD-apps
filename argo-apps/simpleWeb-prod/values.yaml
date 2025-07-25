@@ -2,3 +2,5 @@ env: prod
 namespace: prod
 ingress:
   path: /prod
+image:
+  tag: 1.0.5

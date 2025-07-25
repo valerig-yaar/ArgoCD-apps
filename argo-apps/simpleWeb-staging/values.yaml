@@ -2,3 +2,5 @@ env: staging
 namespace: staging
 ingress:
   path: /staging
+image:
+  tag: 1.0.5

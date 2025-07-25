@@ -2,3 +2,5 @@ env: dev
 namespace: dev
 ingress:
   path: /dev
+image:
+  tag: 1.0.6
