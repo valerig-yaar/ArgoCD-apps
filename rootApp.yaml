@@ -11,7 +11,7 @@ spec:
     namespace: argocd
   source:
     path: argo-apps/applications
-    repoURL: git@github.com:valerig-yaar/ArgoCD-apps.git
+    repoURL: https://github.com/valerig-yaar/ArgoCD-apps.git
     targetRevision: HEAD
   project: default
   syncPolicy:
