@@ -12,7 +12,7 @@ ingress:
   className: alb
   path: /
   pathType: Prefix
-  allowedCIDRs: "147.235.197.252/32,147.235.203.169/32"
+  allowedCIDRs: "0.0.0.0/0"
   groupName: simple-web-group
 
 resources:
