@@ -1,6 +1,6 @@
 env: dev
 namespace: dev
 ingress:
-  path: /dev
+  path: /dev-test
 image:
   tag: 1.0.6
